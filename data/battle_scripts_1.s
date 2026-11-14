@@ -3241,7 +3241,17 @@ BattleScript_EffectForesight::
 BattleScript_ForesightFailCheck:
 	jumpifvolatile BS_TARGET, VOLATILE_FORESIGHT, BattleScript_ButItFailed
 BattleScript_ForesightSet:
-	setvolatile BS_TARGET, VOLATILE_FORESIGHT
+    setvolatile BS_TARGET, VOLATILE_FORESIGHT
+    attackanimation
+    waitanimation
+    printstring STRINGID_PKMNIDENTIFIED
+    waitmessage B_WAIT_TIME_LONG
+    setstatchanger STAT_ACC, 1, FALSE
+    statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+    jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_CHANGE, BattleScript_MoveEnd
+    printfromtable gStatUpStringIds
+    waitmessage B_WAIT_TIME_LONG
+    goto BattleScript_MoveEnd
 BattleScript_IdentifiedFoe:
 	attackanimation
 	waitanimation
