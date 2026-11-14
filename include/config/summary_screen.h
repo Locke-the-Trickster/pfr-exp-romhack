@@ -15,7 +15,7 @@
 #define P_SUMMARY_SCREEN_IV_NUMBER       0      // Shows IVs as numbers in the summary screen skills page.
 #define P_SUMMARY_SCREEN_IV_GRADE        1      // Shows IVs as letter grades in the summary screen skills page.
 #define P_SUMMARY_SCREEN_IV_TEXT         2      // Shows IVs as text in the summary screen skills page (e.g. "Decent", "Pretty Good", etc.)
-#define P_SUMMARY_SCREEN_IV_DISPLAY      P_SUMMARY_SCREEN_IV_TEXT // Change this to one of the above options to set what shows in the summary screen for IVs.
+#define P_SUMMARY_SCREEN_IV_DISPLAY      P_SUMMARY_SCREEN_IV_NUMBER // Change this to one of the above options to set what shows in the summary screen for IVs.
 /*
 LETTER GRADE GUIDE:
 
@@ -28,7 +28,7 @@ LETTER GRADE GUIDE:
 
 Info taken from https://bulbapedia.bulbagarden.net/wiki/Stats_judge.
 */
-#define P_SUMMARY_SCREEN_IV_ONLY         FALSE  // If TRUE, will only show IV info in the summary screen.
+#define P_SUMMARY_SCREEN_IV_ONLY         TRUE  // If TRUE, will only show IV info in the summary screen.
 #define P_SUMMARY_SCREEN_EV_ONLY         FALSE  // If TRUE, will only show EV info in the summary screen.
 
 // IV/EV flags
@@ -36,7 +36,7 @@ Info taken from https://bulbapedia.bulbagarden.net/wiki/Stats_judge.
 
 // Move Relearner settings
 #define P_ENABLE_MOVE_RELEARNERS         FALSE   // If TRUE, it enables move relearners for egg, TM and tutor. (see below for specific configs /flags)
-#define P_SORT_MOVES                     FALSE   // If TRUE, sorts all moves alphabetically in the relearner's list.
+#define P_SORT_MOVES                     TRUE   // If TRUE, sorts all moves alphabetically in the relearner's list.
 
 // Level up Relearner
 #define P_PRE_EVO_MOVES                  FALSE   // If TRUE, it enables the Pokémon to learn moves from it's pre evolution.
@@ -54,7 +54,7 @@ Info taken from https://bulbapedia.bulbagarden.net/wiki/Stats_judge.
 
 // Move Relearner summary screen
 #define P_SUMMARY_SCREEN_MOVE_RELEARNER  TRUE   // If TRUE, shows an option for Pokémon to relearn moves on the summary screen moves page.
-#define P_SUMMARY_MOVE_RELEARNER_FULL_PP TRUE   // If TRUE, the move relearner in the summary screen restores relearned moves' PP to full.
+#define P_SUMMARY_MOVE_RELEARNER_FULL_PP FALSE   // If TRUE, the move relearner in the summary screen restores relearned moves' PP to full.
 
 // Move Relearner party menu
 #define P_PARTY_MOVE_RELEARNER           FALSE  // If TRUE, it enables the move relearner in the party menu.

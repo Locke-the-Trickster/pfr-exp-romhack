@@ -56,8 +56,8 @@ static u32 CalculateFishingTimeOfDayBoost(void);
     #define FISHING_SUPER_ROD_ODDS 50
 #else
     #define FISHING_OLD_ROD_ODDS 100
-    #define FISHING_GOOD_ROD_ODDS 33
-    #define FISHING_SUPER_ROD_ODDS 50
+    #define FISHING_GOOD_ROD_ODDS 100
+    #define FISHING_SUPER_ROD_ODDS 100
 #endif
 
 static const u8 sText_OhABite[] = _("Oh! A bite!");
