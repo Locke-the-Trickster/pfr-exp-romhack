@@ -42,37 +42,37 @@ CeruleanCity_House1_EventScript_DescribeAnotherBadge::
 	end
 
 CeruleanCity_House1_EventScript_DescribeBoulderBadge::
-	msgbox CeruleanCity_House1_Text_AttackStatFlash
+	msgbox CeruleanCity_House1_Text_RockSmash
 	goto CeruleanCity_House1_EventScript_DescribeAnotherBadge
 	end
 
 CeruleanCity_House1_EventScript_DescribeCascadeBadge::
-	msgbox CeruleanCity_House1_Text_ObeyLv30Cut
+	msgbox CeruleanCity_House1_Text_ObeyLv45Flash
 	goto CeruleanCity_House1_EventScript_DescribeAnotherBadge
 	end
 
 CeruleanCity_House1_EventScript_DescribeThunderBadge::
-	msgbox CeruleanCity_House1_Text_SpeedStatFly
+	msgbox CeruleanCity_House1_Text_Cut
 	goto CeruleanCity_House1_EventScript_DescribeAnotherBadge
 	end
 
 CeruleanCity_House1_EventScript_DescribeRainbowBadge::
-	msgbox CeruleanCity_House1_Text_ObeyLv50Strength
+	msgbox CeruleanCity_House1_Text_ObeyLv60Fly
 	goto CeruleanCity_House1_EventScript_DescribeAnotherBadge
 	end
 
 CeruleanCity_House1_EventScript_DescribeSoulBadge::
-	msgbox CeruleanCity_House1_Text_DefenseStatSurf
+	msgbox CeruleanCity_House1_Text_Surf
 	goto CeruleanCity_House1_EventScript_DescribeAnotherBadge
 	end
 
 CeruleanCity_House1_EventScript_DescribeMarshBadge::
-	msgbox CeruleanCity_House1_Text_ObeyLv70RockSmash
+	msgbox CeruleanCity_House1_Text_ObeyLv75Strength
 	goto CeruleanCity_House1_EventScript_DescribeAnotherBadge
 	end
 
 CeruleanCity_House1_EventScript_DescribeVolcanoBadge::
-	msgbox CeruleanCity_House1_Text_SpStatsWaterfall
+	msgbox CeruleanCity_House1_Text_Waterfall
 	goto CeruleanCity_House1_EventScript_DescribeAnotherBadge
 	end
 

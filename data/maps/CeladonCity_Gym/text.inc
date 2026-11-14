@@ -29,9 +29,9 @@ CeladonCity_Gym_Text_ErikaPostBattle::
 
 CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis::
     .string "The RAINBOWBADGE will make\n"
-    .string "POKéMON up to Lv. 50 obey.\p"
+    .string "POKéMON up to Lv. 60 obey.\p"
     .string "It also allows POKéMON to use\n"
-    .string "STRENGTH in and out of battle.\p"
+    .string "FLY in and out of battle.\p"
     .string "Please also take this with you.$"
 
 CeladonCity_Gym_Text_ReceivedTM19FromErika::

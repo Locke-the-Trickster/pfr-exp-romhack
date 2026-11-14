@@ -23,11 +23,10 @@ SaffronCity_Gym_Text_SabrinaPostBattle::
 
 SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis::
     .string "The MARSHBADGE makes POKéMON up\n"
-    .string "to Lv. 70 obey you.\p"
-    .string "Stronger POKéMON will become wild,\n"
-    .string "ignoring your orders in battle.\p"
-    .string "Just don't raise your POKéMON too\n"
-    .string "much to avoid that problem.\p"
+    .string "to Lv. 75 obey you.\p"
+    .string "It also lets you use the move\n"
+    .string "STRENGTH outside of battle\n"
+    .string "to move large boulders.\p"
     .string "Wait, please take this TM with you.$"
 
 SaffronCity_Gym_Text_ReceivedTM04FromSabrina::

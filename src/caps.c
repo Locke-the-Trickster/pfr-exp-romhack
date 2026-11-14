@@ -9,15 +9,21 @@ u32 GetCurrentLevelCap(void)
 {
     static const u32 sLevelCapFlagMap[][2] =
     {
+        {FLAG_RT22_RIVAL,     10},
         {FLAG_BADGE01_GET,    14},
+        {FLAG_GOT_FOSSIL_FROM_MT_MOON, 18},
         {FLAG_BADGE02_GET,    21},
-        {FLAG_BADGE03_GET,    24},
-        {FLAG_BADGE04_GET,    29},
-        {FLAG_BADGE05_GET,    43},
-        {FLAG_BADGE06_GET,    43},
-        {FLAG_BADGE07_GET,    47},
-        {FLAG_BADGE08_GET,    50},
-        {FLAG_SYS_GAME_CLEAR, 63},
+        {FLAG_GOT_SS_TICKET,  24},
+        {FLAG_BADGE03_GET,    28},
+        {FLAG_HIDE_CELADON_ROCKETS, 33},
+        {FLAG_BADGE04_GET,    35},
+        {FLAG_GOT_POKE_FLUTE, 37},
+        {FLAG_BADGE05_GET,    42},
+        {FLAG_BADGE06_GET,    49},
+        {FLAG_BADGE07_GET,    56},
+        {FLAG_BADGE08_GET,    63},
+        {FLAG_SYS_GAME_CLEAR, 70},
+        {FLAG_POSTGAME_CLEAR, 90},
     };
 
     u32 i;

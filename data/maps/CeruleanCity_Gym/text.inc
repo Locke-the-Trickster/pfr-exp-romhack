@@ -13,13 +13,13 @@ CeruleanCity_Gym_Text_ExplainTM03::
 
 CeruleanCity_Gym_Text_ExplainCascadeBadge::
     .string "The CASCADEBADGE makes all\n"
-    .string "POKéMON up to Lv. 30 obey.\p"
+    .string "POKéMON up to Lv. 45 obey.\p"
     .string "That includes even outsiders you\n"
     .string "got in trades.\p"
-    .string "There's more. You can now use CUT\n"
+    .string "There's more. You can now use FLASH\n"
     .string "anytime, even out of battle.\p"
-    .string "You can CUT down small trees to\n"
-    .string "open new pathways.\p"
+    .string "You can use FLASH to illuminate\n"
+    .string "dark caves.\p"
     .string "You can also have my favorite TM.$"
 
 CeruleanCity_Gym_Text_ReceivedTM03FromMisty::

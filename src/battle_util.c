@@ -5665,14 +5665,14 @@ enum Obedience GetAttackerObedienceForAction(void)
     if (FlagGet(FLAG_BADGE08_GET)) // Rain Badge, ignore obedience altogether
         return OBEYS;
 
-    obedienceLevel = 10;
+    obedienceLevel = 30;
 
     if (FlagGet(FLAG_BADGE02_GET))
-        obedienceLevel = 30;
+        obedienceLevel = 45;
     if (FlagGet(FLAG_BADGE04_GET))
-        obedienceLevel = 50;
+        obedienceLevel = 60;
     if (FlagGet(FLAG_BADGE06_GET))
-        obedienceLevel = 70;
+        obedienceLevel = 75;
 
     if (B_OBEDIENCE_MECHANICS >= GEN_8
      && !IsOtherTrainer(gBattleMons[gBattlerAttacker].otId, gBattleMons[gBattlerAttacker].otName))
