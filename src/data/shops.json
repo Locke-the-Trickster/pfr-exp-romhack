@@ -24,7 +24,13 @@
                         "ITEM_POKE_BALL",
                         "ITEM_ORAN_BERRY",
                         "ITEM_PECHA_BERRY",
-                        "ITEM_CHERI_BERRY"
+                        "ITEM_CHERI_BERRY",
+                        "ITEM_POMEG_BERRY",
+                        "ITEM_KELPSY_BERRY",
+                        "ITEM_QUALOT_BERRY",
+                        "ITEM_HONDEW_BERRY",
+                        "ITEM_GREPA_BERRY",
+                        "ITEM_TAMATO_BERRY"
                     ]
                 }
             ]

@@ -11287,7 +11287,7 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("Pomeg Berry"),
         .pluralName = ITEM_PLURAL_NAME("Pomeg Berries"),
-        .price = (I_BERRY_PRICE >= GEN_8) ? 20 : 20,
+        .price = (I_BERRY_PRICE >= GEN_8) ? 1 : 1,
         .description = COMPOUND_STRING(
             "Makes a Pokémon "
             "friendly but\nlowers "
@@ -11305,7 +11305,7 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("Kelpsy Berry"),
         .pluralName = ITEM_PLURAL_NAME("Kelpsy Berries"),
-        .price = (I_BERRY_PRICE >= GEN_8) ? 20 : 20,
+        .price = (I_BERRY_PRICE >= GEN_8) ? 1 : 1,
         .description = COMPOUND_STRING(
             "Makes a Pokémon "
             "friendly but\nlowers "
@@ -11323,7 +11323,7 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("Qualot Berry"),
         .pluralName = ITEM_PLURAL_NAME("Qualot Berries"),
-        .price = (I_BERRY_PRICE >= GEN_8) ? 20 : 20,
+        .price = (I_BERRY_PRICE >= GEN_8) ? 1 : 1,
         .description = COMPOUND_STRING(
             "Makes a Pokémon "
             "friendly but\nlowers "
@@ -11341,7 +11341,7 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("Hondew Berry"),
         .pluralName = ITEM_PLURAL_NAME("Hondew Berries"),
-        .price = (I_BERRY_PRICE >= GEN_8) ? 20 : 20,
+        .price = (I_BERRY_PRICE >= GEN_8) ? 1 : 1,
         .description = COMPOUND_STRING(
             "Makes a Pokémon "
             "friendly but\nlowers "
@@ -11359,7 +11359,7 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("Grepa Berry"),
         .pluralName = ITEM_PLURAL_NAME("Grepa Berries"),
-        .price = (I_BERRY_PRICE >= GEN_8) ? 20 : 20,
+        .price = (I_BERRY_PRICE >= GEN_8) ? 1 : 1,
         .description = COMPOUND_STRING(
             "Makes a Pokémon "
             "friendly but\nlowers "
@@ -11377,7 +11377,7 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("Tamato Berry"),
         .pluralName = ITEM_PLURAL_NAME("Tamato Berries"),
-        .price = (I_BERRY_PRICE >= GEN_8) ? 20 : 20,
+        .price = (I_BERRY_PRICE >= GEN_8) ? 1 : 1,
         .description = COMPOUND_STRING(
             "Makes a Pokémon "
             "friendly but\nlowers "
