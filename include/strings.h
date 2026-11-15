@@ -850,4 +850,8 @@ extern const u8 MoveRelearner_Text_TMMoveLWR[];
 extern const u8 MoveRelearner_Text_TutorMoveLWR[];
 extern const u8 MoveRelearner_Text_MoveLWR[];
 
+//Added Item Strings
+extern const u8 gText_RepellantActive[];
+extern const u8 gText_RepellantInactive[];
+
 #endif //GUARD_STRINGS_H

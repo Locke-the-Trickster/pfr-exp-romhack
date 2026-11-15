@@ -140,7 +140,7 @@
 #define FLAG_HIDE_TWO_ISLAND_BEAUTY                        0x07C
 #define FLAG_HIDE_TWO_ISLAND_POKE_MANIAC                   0x07D
 #define FLAG_HIDE_THREE_ISLAND_ANTIBIKERS                  0x07E
-#define FLAG_0x07F                                         0x07F
+#define FLAG_HIDE_SSANNE_SAILOR                            0x07F
 #define FLAG_HIDE_ROUTE_16_SNORLAX                         0x080
 #define FLAG_HIDE_MEWTWO                                   0x081
 #define FLAG_HIDE_ARTICUNO                                 0x082
@@ -218,8 +218,8 @@
 #define FLAG_0x0C8               0x0C8
 #define FLAG_0x0C9               0x0C9
 #define FLAG_0x0CA               0x0CA
-#define FLAG_0x0CB               0x0CB
-#define FLAG_0x0CC               0x0CC
+#define FLAG_HIDE_SSANNEEXT_SLOWPOKE               0x0CB
+#define FLAG_HIDE_MEW                              0x0CC
 #define FLAG_0x0CD               0x0CD
 #define FLAG_0x0CE               0x0CE
 #define FLAG_0x0CF               0x0CF
@@ -765,7 +765,7 @@
 #define FLAG_GOT_NUGGET_FROM_DUNSPARCE_TUNNEL            0x2E2
 #define FLAG_USED_CUT_ON_RUIN_VALLEY_BRAILLE             0x2E3
 #define FLAG_FOUGHT_DEOXYS                               0x2E4
-#define FLAG_0x2E5                                       0x2E5
+#define FLAG_FOUGHT_MEW                                  0x2E5
 #define FLAG_0x2E6                                       0x2E6
 #define FLAG_0x2E7                                       0x2E7
 #define FLAG_0x2E8                                       0x2E8
@@ -1386,9 +1386,9 @@
 #define FLAG_POSTGAME_CLEAR                                         (SYS_FLAGS + 0x2E)
 #define FLAG_SYS_B_DASH                                             (SYS_FLAGS + 0x2F)
 #define FLAG_SYS_ON_CYCLING_ROAD                                    (SYS_FLAGS + 0x30)
-#define FLAG_0x831                                                  (SYS_FLAGS + 0x31)
-#define FLAG_0x832                                                  (SYS_FLAGS + 0x32)
-#define FLAG_0x833                                                  (SYS_FLAGS + 0x33)
+#define FLAG_SYS_GAUNTLET                                           (SYS_FLAGS + 0x31)
+#define FLAG_REPEL_TOGGLE                                           (SYS_FLAGS + 0x32)
+#define FLAG_LEVEL_CAP_TOGGLE                                       (SYS_FLAGS + 0x33)
 #define FLAG_SYS_NOT_SOMEONES_PC                                    (SYS_FLAGS + 0x34)
 #define FLAG_0x835                                                  (SYS_FLAGS + 0x35)
 #define FLAG_0x836                                                  (SYS_FLAGS + 0x36)

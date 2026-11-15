@@ -1,4 +1,5 @@
 #include "global.h"
+#include "event_data.h"
 #include "field_effect.h"
 #include "field_player_avatar.h"
 #include "fldeff.h"
@@ -13,6 +14,11 @@ bool32 FieldMove_SetUpTeleport(void)
 {
     if (!CheckFollowerNPCFlag(FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE))
         return FALSE;
+
+    if (FlagGet(FLAG_SYS_GAUNTLET))
+    {
+        return FALSE;
+    }
 
     if (Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
     {

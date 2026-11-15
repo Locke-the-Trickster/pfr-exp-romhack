@@ -1,5 +1,10 @@
 Route24_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route24_OnTransition
 	.byte 0
+
+Route24_OnTransition::
+	call_if_set FLAG_SYS_GAUNTLET, Route24_EventScript_NotGauntlet
+	end
 
 Route24_EventScript_Rocket::
 	lock
@@ -95,3 +100,7 @@ Route24_Movement_RocketWalkBackToPos::
 Route24_Movement_WalkDown::
 	walk_down
 	step_end
+
+Route24_EventScript_NotGauntlet::
+	clearflag FLAG_SYS_GAUNTLET
+	end

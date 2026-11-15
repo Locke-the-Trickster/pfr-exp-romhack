@@ -899,6 +899,12 @@ u16 GetLocalWaterMon(void)
 
 bool8 UpdateRepelCounter(void)
 {
+    //Repellent Toggle for infinite repelling
+    if (FlagGet(FLAG_REPEL_TOGGLE))
+    {
+        return FALSE;
+    }
+
     u16 repelLureVar = VarGet(VAR_REPEL_STEP_COUNT);
     u16 steps = REPEL_LURE_STEPS(repelLureVar);
     bool32 isLure = IS_LAST_USED_LURE(repelLureVar);

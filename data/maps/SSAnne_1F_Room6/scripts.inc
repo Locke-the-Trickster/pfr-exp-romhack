@@ -4,6 +4,20 @@ SSAnne_1F_Room6_MapScripts::
 SSAnne_1F_Room6_EventScript_Woman::
 	lock
 	faceplayer
+	call_if_set FLAG_SYS_GAUNTLET, SSAnne_1F_Room6_EventScript_WomanSlowpoke
+	call_if_unset FLAG_SYS_GAUNTLET, SSAnne_1F_Room6_EventScript_WomanHeal
+	release
+	end
+
+SSAnne_1F_Room6_EventScript_WomanSlowpoke::
+	textcolor NPC_TEXT_COLOR_FEMALE
+	msgbox SSAnne_1F_Room6_Text_Slowpoke
+	waitmessage
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	release
+	end
+
+SSAnne_1F_Room6_EventScript_WomanHeal::
 	msgbox SSAnne_1F_Room6_Text_TakeAShortRest, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SSAnne_1F_Room6_EventScript_DeclineHeal
 	closemessage

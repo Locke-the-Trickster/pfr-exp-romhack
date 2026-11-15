@@ -15828,6 +15828,52 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+
+    //Custom Key Items
+
+    [ITEM_POKE_VIAL] =
+    {
+        .name = ITEM_NAME("Poké Vial"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Heals party."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeVial,
+        .iconPic = gItemIcon_Flute,
+        .iconPalette = gItemIconPalette_RedFlute,
+    },
+
+    [ITEM_REPELLENT] =
+    {
+        .name = ITEM_NAME("Repellent"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Wards away weaker Pokémon."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_Repellent,
+        .iconPic = gItemIcon_Repel,
+        .iconPalette = gItemIconPalette_Repel,
+    },
+
+    [ITEM_LEVELUP] =
+    {
+        .name = ITEM_NAME("Level Up"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Increases a Pokémon's\n"
+            "level by one."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_LevelUp,
+        .effect = gItemEffect_RareCandy,
+        .iconPic = gItemIcon_RareCandy,
+        .iconPalette = gItemIconPalette_RareCandy,
+    },
 };
 
 #undef ITEM_NAME

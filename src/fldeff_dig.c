@@ -1,4 +1,5 @@
 #include "global.h"
+#include "event_data.h"
 #include "field_effect.h"
 #include "field_player_avatar.h"
 #include "fldeff.h"
@@ -11,6 +12,10 @@ static void StartDigFieldEffect(void);
 
 bool32 FieldMove_SetUpDig(void)
 {
+    if (FlagGet(FLAG_SYS_GAUNTLET))
+    {
+        return FALSE;
+    }
     if (CanUseEscapeRopeOnCurrMap() == TRUE)
     {
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;

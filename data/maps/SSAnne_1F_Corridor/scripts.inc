@@ -1,5 +1,12 @@
 SSAnne_1F_Corridor_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SSAnne_1F_Corridor_OnTransition
 	.byte 0
+
+SSAnne_1F_Corridor_OnTransition::
+	call_if_unset FLAG_GOT_HM01, SSAnne_1F_Corridor_EventScript_SlowpokeTriggerSetup
+	call_if_unset FLAG_SYS_GAUNTLET, SSAnne_1F_Corridor_EventScript_Gauntlet
+	call_if_set FLAG_GOT_HM01, SSAnne_1F_Corridor_EventScript_SlowpokeHide
+	end
 
 SSAnne_1F_Corridor_EventScript_WorkerM::
 	msgbox SSAnne_1F_Corridor_Text_LeStrongSilentType, MSGBOX_NPC
@@ -8,3 +15,19 @@ SSAnne_1F_Corridor_EventScript_WorkerM::
 SSAnne_1F_Corridor_EventScript_Sailor::
 	msgbox SSAnne_1F_Corridor_Text_PassengersAreRestless, MSGBOX_NPC
 	end
+
+SSAnne_1F_Corridor_EventScript_Gauntlet::
+	setflag FLAG_SYS_GAUNTLET
+	return
+
+SSAnne_1F_Corridor_EventScript_SlowpokeTriggerSetup::
+	call_if_set FLAG_HIDE_SSANNEEXT_SLOWPOKE, SSAnne_1F_Corridor_EventScript_SlowpokeTrigger
+	return
+
+SSAnne_1F_Corridor_EventScript_SlowpokeTrigger::
+	clearflag FLAG_HIDE_SSANNEEXT_SLOWPOKE
+	return
+
+SSAnne_1F_Corridor_EventScript_SlowpokeHide::
+	setflag FLAG_HIDE_SSANNEEXT_SLOWPOKE
+	return

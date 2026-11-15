@@ -5,6 +5,8 @@ SSAnne_Exterior_MapScripts::
 
 SSAnne_Exterior_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_SSANNE_EXTERIOR
+	call_if_set FLAG_GOT_HM01, SSAnne_Exterior_EventScript_RemoveSlowpoke
+	call_if_set FLAG_BADGE08_GET, SSAnne_Exterior_EventScript_MewFightCheck
 	end
 
 SSAnne_Exterior_OnFrame::
@@ -63,3 +65,73 @@ SSAnne_Exterior_Movement_WalkDown::
 	walk_down
 	walk_down
 	step_end
+
+SSAnne_Exterior_EventScript_TryRemoveMew::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, EventScript_Return
+	removeobject VAR_LAST_TALKED
+	return
+
+SSAnne_Exterior_EventScript_MewFightCheck::
+	call_if_unset FLAG_FOUGHT_MEW, SSAnne_Exterior_EventScript_ShowMew
+	return
+
+SSAnne_Exterior_EventScript_ShowMew::
+	clearflag FLAG_HIDE_MEW
+	return
+
+SSAnne_Exterior_EventScript_Mew::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	setwildbattle SPECIES_MEW, 75
+	waitse
+	playmoncry SPECIES_MEW, CRY_MODE_ENCOUNTER
+	message Text_Gyaoo
+	waitmessage
+	waitmoncry
+	delay 10
+	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
+	waitbuttonpress
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SSAnne_Exterior_EventScript_DefeatedMew
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SSAnne_Exterior_EventScript_RanFromMew
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SSAnne_Exterior_EventScript_RanFromMew
+	setflag FLAG_FOUGHT_MEW
+	setflag FLAG_HIDE_MEW
+	release
+	end
+
+SSAnne_Exterior_EventScript_DefeatedMew::
+	setflag FLAG_FOUGHT_MEW
+	goto EventScript_RemoveStaticMon
+	end
+
+SSAnne_Exterior_EventScript_RanFromMew::
+	setvar VAR_0x8004, SPECIES_MEW
+	goto EventScript_MonFlewAway
+	end
+
+SSAnne_Exterior_EventScript_RemoveSlowpoke::
+	setflag FLAG_HIDE_SSANNEEXT_SLOWPOKE
+	removeobject LOCALID_SSANNE_SLOWPOKE
+	return
+
+SSAnne_Exterior_EventScript_Slowpoke::
+	lock
+	faceplayer
+	textcolor NPC_TEXT_COLOR_FEMALE
+	msgbox SSAnne_Exterior_Text_SlowpokeTalk
+	waitmessage
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	releaseall
+	end
+
+SSAnne_Exterior_Text_SlowpokeTalk::
+	.string "Ssloowwww...? Zzz....$"
+

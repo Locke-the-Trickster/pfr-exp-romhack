@@ -155,3 +155,7 @@ const u8 gText_BattlePike[] = _("BATTLE PIKE");
 const u8 gText_BattlePyramid[] = _("BATTLE PYRAMID");
 const u8 gText_Record[] = _("RECORD");
 const u8 gText_Other[] = _("OTHER");
+
+// Added Item Strings
+const u8 gText_RepellantActive[] = _("POKéMON are now repelled.");
+const u8 gText_RepellantInactive[] = _("POKéMON are no longer repelled.");

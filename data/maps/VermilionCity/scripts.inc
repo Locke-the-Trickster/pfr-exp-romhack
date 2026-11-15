@@ -23,6 +23,9 @@ VermilionCity_Movement_ExitSSAnne::
 VermilionCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_VERMILION_CITY
 	call_if_set FLAG_TALKED_TO_OAKS_AIDE_IN_VERMILION, VermilionCity_EventScript_HideOaksAide
+	call_if_unset FLAG_GOT_HM01, VermilionCity_EventScript_ShowSSAnneSailor
+	call_if_set FLAG_GOT_HM01, VermilionCity_EventScript_HideSSAnneSailor
+	call_if_set FLAG_SYS_GAUNTLET, VermilionCity_EventScript_NotGauntlet
 	end
 
 VermilionCity_EventScript_HideOaksAide::
@@ -318,3 +321,24 @@ VermilionCity_EventScript_GymSign::
 VermilionCity_EventScript_HarborSign::
 	msgbox VermilionCity_Text_VermilionHarbor, MSGBOX_SIGN
 	end
+
+VermilionCity_EventScript_ShowSSAnneSailor::
+	clearflag FLAG_HIDE_SSANNE_SAILOR
+	return
+
+VermilionCity_EventScript_SSAnneCapt::
+	lock
+	faceplayer
+	msgbox VermilionCity_Text_SSAnneCaptain
+	closemessage
+	release
+	end
+
+VermilionCity_EventScript_HideSSAnneSailor::
+	setflag FLAG_HIDE_SSANNE_SAILOR
+	removeobject LOCALID_VERMILION_SSANNESAILOR
+	return
+
+VermilionCity_EventScript_NotGauntlet::
+	clearflag FLAG_SYS_GAUNTLET
+	return

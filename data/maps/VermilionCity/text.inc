@@ -129,3 +129,12 @@ VermilionCity_Text_Route2AideHasPackageForYou::
     .string "If you're in the ROUTE 2 area,\n"
     .string "please look for him.$"
 
+VermilionCity_Text_SSAnneCaptain::
+    .string "I'm a new S.S. Anne recruit\n"
+    .string "sent to get some help.\p"
+    .string "The captain of the S.S. Anne\n"
+    .string "is severly ill.\p"
+    .string "If you can get on board,\n"
+    .string "please check on him.\p"
+    .string "Hopefully a well-travelled\n"
+    .string "trainer can help him.$"

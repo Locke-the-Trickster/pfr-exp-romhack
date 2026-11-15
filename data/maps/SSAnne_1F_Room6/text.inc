@@ -14,3 +14,8 @@ SSAnne_1F_Room6_Text_SorryYouLookLikeMySister::
     .string "Oh, I'm sorry for fussing over you.\n"
     .string "You look like my little sister…$"
 
+SSAnne_1F_Room6_Text_Slowpoke::
+    .string "Looks like a Slowpoke is blocking\n"
+    .string "the dock again.\p"
+    .string "Maybe talk to the captain?$"
+

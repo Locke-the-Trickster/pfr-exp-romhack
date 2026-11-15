@@ -5,6 +5,7 @@ CeruleanCity_MapScripts::
 CeruleanCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_CERULEAN_CITY
 	call_if_unset FLAG_GOT_SS_TICKET, CeruleanCity_EventScript_BlockExits
+	call_if_set FLAG_SYS_GAUNTLET, CeruleanCity_EventScript_NotGauntlet
 	end
 
 CeruleanCity_EventScript_BlockExits::
@@ -355,4 +356,8 @@ CeruleanCity_EventScript_GymSign::
 	famechecker FAMECHECKER_MISTY, 0
 	msgbox CeruleanCity_Text_GymSign
 	releaseall
+	end
+
+CeruleanCity_EventScript_NotGauntlet::
+	clearflag FLAG_SYS_GAUNTLET
 	end

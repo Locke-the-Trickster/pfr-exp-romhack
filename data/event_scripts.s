@@ -948,6 +948,9 @@ Text_RestoredPkmnToFullHealth::
 	.string "We've restored your POKéMON to\l"
 	.string "full health.$"
 
+Text_PokeVialText::
+	.string "Party POKéMON healed.$"
+
 Text_WirelessClubUndergoingAdjustments::
 	.string "I'm terribly sorry.\n"
 	.string "The POKéMON WIRELESS CLUB is\l"
