@@ -8,18 +8,18 @@ FuchsiaCity_House2_Text_DoYouLikeToFish::
 FuchsiaCity_House2_Text_LikeYourStyleTakeThis::
     .string "Grand! I like your style.\n"
     .string "I think we can be friends.\p"
-    .string "Take this and fish, young friend!$"
+    .string "Take this and scale\n"
+    .string "WATERFALLs, young friend!$"
 
-FuchsiaCity_House2_Text_ReceivedGoodRod::
-    .string "{PLAYER} received a GOOD ROD from\n"
+FuchsiaCity_House2_Text_ReceivedHM07::
+    .string "{PLAYER} received HM07 from\n"
     .string "the FISHING GURU's brother.$"
 
-FuchsiaCity_House2_Text_GoodRodCanCatchBetterMons::
+FuchsiaCity_House2_Text_CanCatchBetterMons::
     .string "Fishing is a way of life!\n"
     .string "It is like the finest poetry.\p"
-    .string "A crummy OLD ROD could only catch\n"
-    .string "MAGIKARP, yes?\p"
-    .string "But with a GOOD ROD, you can\n"
+    .string "With the ability to scale,\n"
+    .string "WATERFALLS, you can\p"
     .string "catch much better POKéMON.$"
 
 FuchsiaCity_House2_Text_OhThatsDisappointing::

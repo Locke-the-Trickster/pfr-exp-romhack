@@ -15,7 +15,7 @@ PewterCity_Gym_EventScript_DefeatedBrock::
 	setflag FLAG_BADGE01_GET
 	setvar VAR_MAP_SCENE_PEWTER_CITY, 1
 	setflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
-	clearflag FLAG_HIDE_PEWTER_CITY_RUNNING_SHOES_GUY
+	clearflag FLAG_HIDE_PEWTER_CITY_HM05_HM06_AIDE
 	set_gym_trainers 1
 	goto PewterCity_Gym_EventScript_GiveTM39
 	end

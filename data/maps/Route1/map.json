@@ -23,6 +23,11 @@
       "map": "MAP_PALLET_TOWN",
       "offset": 0,
       "direction": "down"
+    },
+    {
+      "map": "MAP_PALLET_RIVER",
+      "offset": 20,
+      "direction": "left"
     }
   ],
   "object_events": [
@@ -55,12 +60,8 @@
       "flag": "0"
     }
   ],
-  "warp_events": [
-
-  ],
-  "coord_events": [
-
-  ],
+  "warp_events": [],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

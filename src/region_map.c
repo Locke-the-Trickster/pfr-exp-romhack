@@ -676,7 +676,7 @@ static const struct DungeonMapInfo sDungeonInfo[] = {
         .desc = sText_RegionMap_AreaDesc_MtMoon
     }, {
         .id = MAPSEC_DIGLETTS_CAVE,
-        .name = sMapName_DIGLETT_S_CAVE,
+        .name = sMapName_VERMILION_CAVE,
         .desc = sText_RegionMap_AreaDesc_DiglettsCave
     }, {
         .id = MAPSEC_KANTO_VICTORY_ROAD,

@@ -65,3 +65,28 @@ PalletTown_Text_OakYouEnjoyingTraveling::
     .string "Good for you, good for you.\n"
     .string "Hohoho.$"
 
+PalletTown_Text_MomItemsIntro::
+    .string "MOM: Wonderful, you got your\n"
+    .string "first POKéMON. It's adorable.\p"
+    .string "Here are some useful items\n"
+    .string "for your journey:\p"
+    .string "a POKé Vial, Repellent,\n"
+    .string "POKéMON Box Link, Level Up,\p"
+    .string "Super Rod, and\n"
+    .string "Running Shoes.$"
+
+PalletTown_Text_ReceivedMomGift::
+    .string "{PLAYER} put the POKé Vial,\n"
+    .string "Repellent, Super Rod,\p"
+    .string "POKéMON Box Link, and Level Up\n"
+    .string "in the KEY ITEMS pocket.$"
+
+PalletTown_Text_MomItemsEnd::
+    .string "I'm cheering for you.\n"
+    .string "-kisses-\p"
+    .string "I love you.$"
+
+PalletTown_Text_MomItemsNoRoom::
+    .string "No room for these items.\p"
+    .string "Come back when you have\n"
+    .string "space.$"

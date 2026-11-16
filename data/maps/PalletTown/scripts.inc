@@ -10,6 +10,7 @@ PalletTown_OnTransition::
 	call_if_set FLAG_PALLET_LADY_NOT_BLOCKING_SIGN, PalletTown_EventScript_TryReadySignLady
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 0, PalletTown_EventScript_SetSignLadyPos
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 1, PalletTown_EventScript_SetSignLadyDone
+	call_if_set FLAG_GOTSTARTER_NOITEMS, PalletTown_EventScript_UnhideMomPallet
 	end
 
 PalletTown_EventScript_TryReadySignLady::
@@ -24,7 +25,7 @@ PalletTown_EventScript_SetSignLadyDone::
 
 PalletTown_EventScript_SetSignLadyPos::
 	goto_if_set FLAG_PALLET_LADY_NOT_BLOCKING_SIGN, PalletTown_EventScript_MoveSignLadyToRouteEntrance
-	setobjectxyperm LOCALID_PALLET_SIGN_LADY, 5, 15
+	setobjectxyperm LOCALID_PALLET_SIGN_LADY, 1, 14
 	setobjectmovementtype LOCALID_PALLET_SIGN_LADY, MOVEMENT_TYPE_FACE_UP
 	return
 
@@ -447,3 +448,126 @@ PalletTown_EventScript_SignLadyStartShowSign::
 	call PalletTown_EventScript_SignLadyShowSign
 	release
 	end
+
+PalletTown_EventScript_UnhideMomPallet::
+	clearflag FLAG_HIDE_MOM_PALLET
+	setvar VAR_MAP_SCENE_MOMGIFT, 1
+	end
+
+PalletTown_EventScript_MomTrigger::
+	lockall
+	applymovement LOCALID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	setvar VAR_MAP_SCENE_MOMGIFT, 2
+	call PalletTown_EventScript_MomItems
+	releaseall
+	end
+
+PalletTown_EventScript_MomItems::
+	lockall
+	applymovement LOCALID_PALLET_MOM, Common_Movement_FacePlayer
+	waitmovement 0
+	textcolor NPC_TEXT_COLOR_FEMALE
+	msgbox PalletTown_Text_MomItemsIntro
+	checkitemspace ITEM_REPELLENT
+	goto_if_eq VAR_RESULT, FALSE, PalletTown_EventScript_NoRoomforItems
+	additem ITEM_REPELLENT
+	checkitemspace ITEM_POKEMON_BOX_LINK
+	goto_if_eq VAR_RESULT, FALSE, PalletTown_EventScript_NoRoomforItems
+	additem ITEM_POKEMON_BOX_LINK
+	setflag FLAG_SYS_B_DASH
+	checkitemspace ITEM_SUPER_ROD
+	goto_if_eq VAR_RESULT, FALSE, PalletTown_EventScript_NoRoomforItems
+	additem ITEM_SUPER_ROD
+	setflag FLAG_GOT_SUPER_ROD
+	checkitemspace ITEM_LEVELUP
+	goto_if_eq VAR_RESULT, FALSE, PalletTown_EventScript_NoRoomforItems
+	additem ITEM_LEVELUP
+	checkitemspace ITEM_POKE_VIAL
+	goto_if_eq VAR_RESULT, FALSE, PalletTown_EventScript_NoRoomforItems
+	additem ITEM_POKE_VIAL
+	playfanfare MUS_OBTAIN_KEY_ITEM
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox PalletTown_Text_ReceivedMomGift
+	waitmessage
+	textcolor NPC_TEXT_COLOR_FEMALE
+	msgbox PalletTown_Text_MomItemsEnd
+	closemessage
+	call_if_eq VAR_MAP_SCENE_MOMGIFT, 1, PalletTown_EventScript_MomExit1
+	call_if_eq VAR_MAP_SCENE_MOMGIFT, 2, PalletTown_EventScript_MomExit2
+	opendoor 6, 7
+	waitdooranim
+	applymovement LOCALID_PALLET_MOM, PalletTown_Movement_MomDoor
+	waitmovement 0
+	removeobject LOCALID_PALLET_MOM
+	closedoor 6, 7
+	waitdooranim
+	setflag FLAG_HIDE_MOM_PALLET
+	clearflag FLAG_GOTSTARTER_NOITEMS
+	setvar VAR_MAP_SCENE_MOMGIFT, 0
+	releaseall
+	end
+
+PalletTown_EventScript_NoRoomforItems::
+	msgbox PalletTown_Text_MomItemsNoRoom
+	release
+	end
+
+PalletTown_EventScript_MomExit1::
+	applymovement LOCALID_PALLET_MOM, PalletTown_Movement_MomExit1
+	waitmovement 0
+	return
+
+PalletTown_EventScript_MomExit2::
+	applymovement LOCALID_PALLET_MOM, PalletTown_Movement_MomExit2
+	waitmovement 0
+	return
+
+PalletTown_Movement_MomExit1::
+	face_right
+	walk_right
+	face_down
+	walk_down
+	walk_down
+	face_left
+	walk_left
+	walk_left
+	face_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	face_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	face_up
+	step_end
+
+PalletTown_Movement_MomExit2::
+	face_down
+	walk_down
+	walk_down
+	face_left
+	walk_left
+	face_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	face_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	face_up
+	step_end
+
+PalletTown_Movement_MomDoor::
+	walk_up
+	step_end

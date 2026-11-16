@@ -28,7 +28,9 @@ ViridianCity_Text_GrandpaHasntHadCoffeeYet::
     .string "Oh, Grandpa!\n"
     .string "Don't be so mean!\p"
     .string "I'm so sorry.\n"
-    .string "He hasn't had his coffee yet.$"
+    .string "He hasn't had his coffee yet.\p"
+    .string "If you are looking for that other\n"
+    .string "boy from Pallet, check Route 22.$"
 
 ViridianCity_Text_GoShoppingInPewterOccasionally::
     .string "I go shopping in PEWTER CITY\n"
@@ -123,3 +125,6 @@ ViridianCity_Text_GymSign::
 ViridianCity_Text_GymDoorsAreLocked::
     .string "VIRIDIAN GYM's doors are locked…$"
 
+ViridianCity_Text_GiveTeachyTV::
+    .string "Sorry for the inconvenience.\n"
+    .string "Take this TeachyTV.$"

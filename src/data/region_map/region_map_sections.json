@@ -619,7 +619,7 @@
     },
     {
       "id": "MAPSEC_DIGLETTS_CAVE",
-      "name": "DIGLETT'S CAVE",
+      "name": "VERMILION CAVE",
       "x": 15,
       "y": 9,
       "width": 1,
@@ -1094,6 +1094,22 @@
       "name": "ARTISAN CAVE",
       "x": 9,
       "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_PALLET_RIVER",
+      "name": "PALLET RIVER",
+      "x": 4,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_HIDDEN_MEADOW",
+      "name": "HIDDEN MEADOW",
+      "x": 4,
+      "y": 8,
       "width": 1,
       "height": 1
     }

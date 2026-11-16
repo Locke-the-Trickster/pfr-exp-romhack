@@ -2183,7 +2183,7 @@ void Controller_WaitForHealthBar(enum BattlerId battler)
         if (GetBattlerSide(battler) == B_SIDE_OPPONENT && !BtlCtrl_OakOldMan_TestState2Flag(1) && (gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE))
         {
             BtlCtrl_OakOldMan_SetState2Flag(1);
-            gBattlerControllerFuncs[battler] = PrintOakText_InflictingDamageIsKey;
+            //gBattlerControllerFuncs[battler] = PrintOakText_InflictingDamageIsKey;
         }
         else
         {

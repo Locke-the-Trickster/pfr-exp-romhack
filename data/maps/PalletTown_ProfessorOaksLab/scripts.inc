@@ -655,6 +655,7 @@ PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene::
 	call EventScript_RestorePrevTextColor
 	setflag FLAG_SYS_POKEDEX_GET
 	special SetUnlockedPokedexFlags
+	special EnableNationalPokedex
 	setvar VAR_MAP_SCENE_POKEMON_CENTER_TEALA, 1
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese
 	giveitem_msg PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls, ITEM_POKE_BALL, 5
@@ -677,7 +678,6 @@ PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene::
 	fadedefaultbgm
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6
 	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_MART, 2
-	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 1
 	setvar VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 1
 	setvar VAR_MAP_SCENE_ROUTE22, 1
 	release
@@ -1119,7 +1119,9 @@ PalletTown_ProfessorOaksLab_EventScript_ChoseStarter::
 	call EventScript_RestorePrevTextColor
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_PALLET_LADY_NOT_BLOCKING_SIGN
-	givemon PLAYER_STARTER_SPECIES, 5
+	givemon PLAYER_STARTER_SPECIES, 5, ITEM_ORAN_BERRY
+	setflag FLAG_STARTER_CHOSEN
+	setflag FLAG_GOTSTARTER_NOITEMS
 	copyvar VAR_STARTER_MON, PLAYER_STARTER_NUM
 	bufferspeciesname STR_VAR_1, PLAYER_STARTER_SPECIES
 	message PalletTown_ProfessorOaksLab_Text_ReceivedMonFromOak

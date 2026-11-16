@@ -138,6 +138,11 @@ PewterCity_Text_ExplainRunningShoes::
     .string "Press the B Button to run.\n"
     .string "But only where there's room to run!$"
 
+PewterCity_Text_ReceivedHM05_HM06FromAide::
+    .string "{PLAYER} received HM05 FLASH\n"
+    .string "and HM06 ROCK SMASH\p"
+    .string "from the AIDE.$"
+
 PewterCity_Text_MustBeGoingBackToLab::
     .string "Well, I must be going back to\n"
     .string "the LAB.\p"

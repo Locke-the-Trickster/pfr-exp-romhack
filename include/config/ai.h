@@ -122,8 +122,8 @@
 
 // Configurations specifically for AI_FLAG_DOUBLE_BATTLE.
 #define FRIENDLY_FIRE_RISKY_THRESHOLD             2 // AI_FLAG_RISKY acceptable number of hits to KO the partner via friendly fire
-#define FRIENDLY_FIRE_NORMAL_THRESHOLD            3 // typical acceptable number of hits to KO the partner via friendly fire
-#define FRIENDLY_FIRE_CONSERVATIVE_THRESHOLD      4 // AI_FLAG_CONSERVATIVE acceptable number of hits to KO the partner via friendly fire
+#define FRIENDLY_FIRE_NORMAL_THRESHOLD            5 // typical acceptable number of hits to KO the partner via friendly fire
+#define FRIENDLY_FIRE_CONSERVATIVE_THRESHOLD      6 // AI_FLAG_CONSERVATIVE acceptable number of hits to KO the partner via friendly fire
 // Counterplay on the assumption of opponents Protecting.
 #define DOUBLE_TRICK_ROOM_ON_LAST_TURN_CHANCE    35 // both pokemon use Trick Room on turn Trick Room expires in the hopes both opponents used Protect to stall, getting a free refresh on the timer
 #define TAILWIND_IN_TRICK_ROOM_CHANCE            35 // use Tailwind on turn Trick Room expires in the hopes both opponents used Protect to stall

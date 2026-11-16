@@ -344,6 +344,10 @@ void ScrCmd_createmon(struct ScriptContext *ctx)
             ivs[i] = Random() % (MAX_PER_STAT_IVS + 1);
             nonFixedIvCount++;
         }
+        if(!FlagGet(FLAG_STARTER_CHOSEN))
+        {
+            ivs[i] = MIN_PER_STAT_IVS_FOR_STARTERS + Random() % (MAX_PER_STAT_IVS - MIN_PER_STAT_IVS_FOR_STARTERS + 1);
+        }
     }
 
     // Perfect IV calculation

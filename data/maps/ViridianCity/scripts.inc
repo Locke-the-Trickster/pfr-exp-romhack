@@ -121,7 +121,7 @@ ViridianCity_EventScript_TutorialCompleted::
 	end
 
 ViridianCity_EventScript_TutorialStart::
-	call ViridianCity_EventScript_DoTutorialBattle
+	call ViridianCity_EventScript_GiveTeachyTV
 	release
 	end
 
@@ -206,7 +206,7 @@ ViridianCity_EventScript_TutorialTriggerLeft::
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
-	call ViridianCity_EventScript_DoTutorialBattle
+	call ViridianCity_EventScript_GiveTeachyTV
 	release
 	end
 
@@ -217,7 +217,7 @@ ViridianCity_EventScript_TutorialTriggerRight::
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
-	call ViridianCity_EventScript_DoTutorialBattle
+	call ViridianCity_EventScript_GiveTeachyTV
 	release
 	end
 
@@ -234,4 +234,14 @@ ViridianCity_EventScript_DoTutorialBattle::
 	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 2
 	giveitem ITEM_TEACHY_TV
 	msgbox ViridianCity_Text_WatchThatToLearnBasics
+	return
+
+ViridianCity_EventScript_GiveTeachyTV::
+	lock
+	faceplayer
+	msgbox ViridianCity_Text_GiveTeachyTV
+	closemessage
+	giveitem ITEM_TEACHY_TV
+	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 2
+	call ViridianCity_EventScript_WatchToLearnBasics
 	return

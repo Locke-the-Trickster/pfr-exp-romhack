@@ -232,6 +232,7 @@ enum OtIdMethod
 
 #define MAX_PER_STAT_IVS 31
 #define MAX_IV_MASK 31
+#define MIN_PER_STAT_IVS_FOR_STARTERS 20
 #define USE_RANDOM_IVS (MAX_PER_STAT_IVS + 1)
 #define MAX_PER_STAT_EVS ((P_EV_CAP >= GEN_6) ? 252 : 255)
 #define MAX_TOTAL_EVS 510

@@ -132,7 +132,7 @@
 #define FLAG_HIDE_TWO_ISLAND_GAME_CORNER_BIKER             0x074
 #define FLAG_HIDE_TWO_ISLAND_GAME_CORNER_LOSTELLE          0x075
 #define FLAG_HIDE_LOSTELLE_IN_HER_HOME                     0x076
-#define FLAG_0x077                                         0x077
+#define FLAG_HIDE_MOM_PALLET                               0x077
 #define FLAG_0x078                                         0x078
 #define FLAG_HIDE_THREE_ISLAND_BIKERS                      0x079
 #define FLAG_HIDE_LOSTELLE_IN_BERRY_FOREST                 0x07A
@@ -159,7 +159,7 @@
 #define FLAG_HIDE_SAPPHIRE                                 0x08F
 #define FLAG_HIDE_DOTTED_HOLE_SCIENTIST                    0x090
 #define FLAG_HIDE_THREE_ISLAND_LONE_BIKER                  0x091
-#define FLAG_HIDE_PEWTER_CITY_RUNNING_SHOES_GUY            0x092
+#define FLAG_HIDE_PEWTER_CITY_HM05_HM06_AIDE               0x092
 #define FLAG_HIDE_LOST_CAVE_SELPHY                         0x093
 #define FLAG_HIDE_RESORT_GORGEOUS_SELPHY                   0x094
 #define FLAG_HIDE_RESORT_GORGEOUS_INSIDE_SELPHY            0x095
@@ -596,11 +596,11 @@
 #define FLAG_GOT_HM05                                    0x23B
 #define FLAG_RESCUED_MR_FUJI                             0x23C
 #define FLAG_GOT_POKE_FLUTE                              0x23D
-#define FLAG_0x23E                                       0x23E
+#define FLAG_STARTER_CHOSEN                              0x23E
 #define FLAG_GOT_TM28_FROM_ROCKET                        0x23F
 #define FLAG_GOT_OLD_ROD                                 0x240
 #define FLAG_GOT_BIKE_VOUCHER                            0x241
-#define FLAG_0x242                                       0x242
+#define FLAG_GOT_HM07                                    0x242
 #define FLAG_GOT_COIN_CASE                               0x243
 #define FLAG_GOT_GOOD_ROD                                0x244
 #define FLAG_GOT_TM29_FROM_MR_PSYCHIC                    0x245
@@ -807,7 +807,7 @@
 #define FLAG_RECEIVED_GOLD_SHIELD                        0x30A
 #define FLAG_CHOSEN_MULTI_BATTLE_NPC_PARTNER             0x30B
 #define FLAG_0x30C               0x30C
-#define FLAG_0x30D               0x30D
+#define FLAG_GOT_TM_REST                                 0x30D
 #define FLAG_0x30E               0x30E
 #define FLAG_0x30F               0x30F
 #define FLAG_0x310               0x310
@@ -852,7 +852,7 @@
 #define FLAG_0x337               0x337
 #define FLAG_0x338               0x338
 #define FLAG_0x339               0x339
-#define FLAG_0x33A               0x33A
+#define FLAG_GOTSTARTER_NOITEMS  0x33A
 #define FLAG_0x33B               0x33B
 #define FLAG_0x33C               0x33C
 #define FLAG_0x33D               0x33D

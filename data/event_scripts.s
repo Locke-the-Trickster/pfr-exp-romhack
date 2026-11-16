@@ -1156,3 +1156,9 @@ EventScript_NoMoreRoomForPokemon::
 	msgbox Text_NoMoreRoomForPokemon
 	release
 	end
+
+	.include "data/maps/PalletRiver/scripts.inc"
+	.include "data/maps/PalletRiver/text.inc"
+
+	.include "data/maps/HiddenMeadow/scripts.inc"
+	.include "data/maps/HiddenMeadow/text.inc"

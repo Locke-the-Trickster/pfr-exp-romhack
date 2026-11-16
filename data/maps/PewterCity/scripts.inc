@@ -651,36 +651,39 @@ PewterCity_EventScript_CitySign::
 	msgbox PewterCity_Text_CitySign, MSGBOX_SIGN
 	end
 
-PewterCity_EventScript_RunningShoesAide::
-	lock
+PewterCity_EventScript_HM05_HM06_Aide::
+	lockall
 	faceplayer
 	setvar VAR_TEMP_1, 0
-	call PewterCity_EventScript_AideGiveRunningShoes
+	call PewterCity_EventScript_AideGiveHM05_HM06
 	release
 	end
 
-PewterCity_EventScript_RunningShoesAideTriggerTop::
+PewterCity_EventScript_HM05_HM06_AideTriggerTop::
 	lockall
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	setvar VAR_TEMP_1, 1
-	call PewterCity_EventScript_AideGiveRunningShoes
+	call PewterCity_EventScript_AideGiveHM05_HM06
 	releaseall
 	end
 
-PewterCity_EventScript_RunningShoesAideTriggerMid::
+PewterCity_EventScript_HM05_HM06_AideTriggerMid::
 	lockall
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	setvar VAR_TEMP_1, 2
-	call PewterCity_EventScript_AideGiveRunningShoes
+	call PewterCity_EventScript_AideGiveHM05_HM06
 	releaseall
 	end
 
-PewterCity_EventScript_RunningShoesAideTriggerBottom::
+PewterCity_EventScript_HM05_HM06_AideTriggerBottom::
 	lockall
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	setvar VAR_TEMP_1, 3
-	call PewterCity_EventScript_AideGiveRunningShoes
+	call PewterCity_EventScript_AideGiveHM05_HM06
 	releaseall
 	end
 
-PewterCity_EventScript_AideGiveRunningShoes::
+PewterCity_EventScript_AideGiveHM05_HM06::
 	textcolor NPC_TEXT_COLOR_MALE
 	call_if_eq VAR_TEMP_1, 1, PewterCity_EventScript_AideNoticePlayer
 	call_if_eq VAR_TEMP_1, 2, PewterCity_EventScript_AideNoticePlayer
@@ -698,14 +701,18 @@ PewterCity_EventScript_AideGiveRunningShoes::
 	call_if_eq VAR_TEMP_1, 3, PewterCity_EventScript_AideApproachPlayer3
 	msgbox PewterCity_Text_AskedToDeliverThis
 	textcolor NPC_TEXT_COLOR_NEUTRAL
-	playfanfare MUS_OBTAIN_KEY_ITEM
-	message PewterCity_Text_ReceivedRunningShoesFromAide
+	checkitemspace ITEM_HM05
+	goto_if_eq VAR_RESULT, FALSE, Aide_EventScript_NoRoomForItem
+	checkitemspace ITEM_HM06
+	goto_if_eq VAR_RESULT, FALSE, Aide_EventScript_NoRoomForItem
+	playfanfare MUS_OBTAIN_TMHM
+	msgbox PewterCity_Text_ReceivedHM05_HM06FromAide
+	giveitem ITEM_HM05
+	giveitem ITEM_HM06
 	waitmessage
 	waitfanfare
-	msgbox PewterCity_Text_SwitchedShoesWithRunningShoes
-	special DisableMsgBoxWalkaway
-	signmsg
-	msgbox PewterCity_Text_ExplainRunningShoes
+	setflag FLAG_GOT_HM05
+	setflag FLAG_GOT_HM06
 	normalmsg
 	call EventScript_RestorePrevTextColor
 	msgbox PewterCity_Text_MustBeGoingBackToLab
@@ -716,10 +723,7 @@ PewterCity_EventScript_AideGiveRunningShoes::
 	call_if_eq VAR_TEMP_1, 3, PewterCity_EventScript_AideExit3
 	delay 30
 	textcolor NPC_TEXT_COLOR_NEUTRAL
-	msgbox PewterCity_Text_RunningShoesLetterFromMom
-	closemessage
 	removeobject LOCALID_PEWTER_AIDE
-	setflag FLAG_SYS_B_DASH
 	setvar VAR_MAP_SCENE_PEWTER_CITY, 2
 	return
 
