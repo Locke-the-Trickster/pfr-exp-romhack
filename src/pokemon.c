@@ -4436,6 +4436,14 @@ bool32 DoesMonMeetAdditionalConditions(struct Pokemon *mon, const struct Evoluti
             if (GetCurrentRegion() != params[i].arg1)
                 currentCondition = TRUE;
             break;
+        //Custom
+        case IF_MIN_LEVEL:
+        {
+            u32 currentLevel = GetMonData(mon, MON_DATA_LEVEL, 0);
+            if (currentLevel >= params[i].arg1)
+                currentCondition = TRUE;
+            break;
+        }
         case CONDITIONS_END:
             break;
         }

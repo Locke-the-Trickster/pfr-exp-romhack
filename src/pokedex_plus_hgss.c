@@ -6858,6 +6858,11 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, enum Species species
                     StringAppend(gStringVar4, gStringVar2);
                     StringAppend(gStringVar4, COMPOUND_STRING(" in bag"));
                     break;
+                case IF_MIN_LEVEL:
+                    StringAppend(gStringVar4, COMPOUND_STRING("{LV}{UP_ARROW}"));
+                    ConvertIntToDecimalStringN(gStringVar2, evolutions[i].params[j].arg1, STR_CONV_MODE_LEFT_ALIGN, EVO_SCREEN_LVL_DIGITS);
+                    StringAppend(gStringVar4, gStringVar2);
+                    break;
                 case CONDITIONS_END:
                     break;
                 }
